@@ -1,5 +1,7 @@
-package com.nardos.springdemo.user;
+package com.nardos.springdemo.Schedule;
 
+import com.nardos.springdemo.user.User;
+import com.nardos.springdemo.user.Userservice;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -7,18 +9,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/users")
-public class Usercontroller {
+public class Schedulecontroller {
 
+    private final Scheduleservice Service;
 
-    private final Userservice Service;
-
-    public Usercontroller(Userservice service) {
+    public Schedulecontroller(Scheduleservice service) {
         Service = service;
     }
 
     @PostMapping
     public User save(
-           @RequestBody User user
+            @RequestBody User user
     ){
         User User = null;
         return Service.save(User);

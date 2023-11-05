@@ -3,6 +3,7 @@ package com.nardos.springdemo.user;
 import java.time.LocalDate;
 
 public class User {
+    private final Long Id;
     private String firstname;
 
     private String lastname;
@@ -13,16 +14,14 @@ public class User {
 
     private int age;
 
-    public User(String firstname, String lastname, LocalDate dateOfBirth, String gender, int age) {
+
+    public User(String firstname, String lastname, LocalDate dateOfBirth, String gender, int age, Long Id) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.age = age;
-    }
-
-    public User() {
-
+        this.Id = Id;
     }
 
     public String getFirstname() {
@@ -63,5 +62,11 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Long getID() {return null;}
+
+    public Object getId() {
+        return null;
     }
 }
